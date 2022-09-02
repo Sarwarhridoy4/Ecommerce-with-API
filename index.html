@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CDN -->
+    <link rel="shortcut icon" href="./icons/icon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>E-Commerce with API</title>
+</head>
+
+<body>
+    <header>
+        <!-- Search Input Field -->
+        <div class="form-control w-full max-w-xs mx-auto mt-2">
+            <label class="label">
+                <span class="label-text">Search Your Products</span>
+                <span class="label-text-alt">Press <kbd class="kbd kbd-sm">Enter</kbd></span>
+            </label>
+            <input id="search-field" type="text" placeholder="Search here"
+                class="input input-bordered w-full max-w-xs" />
+        </div>
+    </header>
+    <section id="not-found" class="hidden mt-5">
+        <!-- Not Found -->
+        <div class="alert alert-warning shadow-lg">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>Warning: No Such Product Founds!</span>
+            </div>
+        </div>
+        <!-- Not Found Ends -->
+    </section>
+    <main class="p-4 mt-4">
+        <div class="flex">
+            <!-- Side-Menu -->
+            <div class="flex-none">
+                <ul id="all-menu" class="menu bg-base-100 w-56 p-2 rounded-box">
+                    <!-- Dynamically li added by inex.js file  -->
+                </ul>
+            </div>
+            <!-- Product Cards -->
+            <div id="products-container" class="grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Will be loaded Dynamically by index.js -->
+
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="JS/index.js"></script>
+</body>
+
+</html>
